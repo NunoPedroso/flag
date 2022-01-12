@@ -1,0 +1,45 @@
+.toast {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  &__item {
+    background: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    padding: 1em 2em 1em 1em;
+    position: relative;
+    margin-bottom: 1px;
+
+    &[data-status="warning"] {
+      background-color: var(--color-highlight);
+    }
+
+    &[data-status="danger"] {
+      background-color: maroon;
+    }
+
+    &[data-status="success"] {
+      background-color: olivedrab;
+    }
+  }
+
+  &__message {
+    margin: 0;
+  }
+
+  &__close {
+    color: inherit;
+    font-size: 1rem;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+  }
+}

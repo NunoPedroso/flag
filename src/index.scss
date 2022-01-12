@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --color-default: rgb(51, 51, 51);
+  --color-secondary: rgb(153, 153, 153);
+  --color-primary: rgb(3, 169, 244);
+  --color-highlight: rgb(255, 152, 0);
+
+  --color-white: rgb(255, 255, 255);
+
+  --color-surface: rgb(228, 234, 238);
+  --color-surface-light: rgb(242, 246, 248);
+
+  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  overflow-y: scroll;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.875rem;
+  color: var(--color-default);
+  background: var(--color-surface-light);
+}
+
+button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  min-width: 100px;
+  border-radius: 2px;
+
+  &[disabled] {
+    opacity: 0.65;
+    cursor: default;
+  }
+}
+
+
+
+.material-icons {
+  font-size: inherit;
+}
+

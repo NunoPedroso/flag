@@ -1,0 +1,78 @@
+.team {
+  &__header {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: var(--color-surface);
+    color: var(--color-secondary);
+    border: 1px solid var(--color-secondary);
+  }
+
+  &__headline {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+
+  &__table {
+    width: 100%;
+    border: 1px solid var(--color-secondary);
+    border-top: none;
+    border-collapse: collapse;
+
+    tr {
+      border-bottom: 1px solid var(--color-secondary);
+    }
+
+    th,
+    td {
+      padding: 10px 10px 10px 20px;
+    }
+
+    th {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      letter-spacing: 1px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    td {
+    }
+  }
+
+  &__rate {
+    input {
+      max-width: 60px;
+    }
+  }
+
+  &__role {
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 2px;
+
+    &[data-role="Frontend Developer"] {
+      background: #bb2020;
+    }
+    &[data-role="Backend Developer"] {
+      background: #06111c;
+    }
+    &[data-role="UI Designer"] {
+      background: #bec7c7;
+    }
+    &[data-role="UX Designer"] {
+      background: #d98e04;
+    }
+    &[data-role="Tech Lead"] {
+      background: #121317;
+    }
+    &[data-role="QA"] {
+      background: #7e8054;
+    }
+  }
+}

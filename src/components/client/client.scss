@@ -1,0 +1,50 @@
+.client {
+  padding: 5px 20px 5px 10px;
+  border: 1px solid var(--color-secondary);
+  background: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  transition: 500ms;
+
+  &[data-status="archived"] {
+    .client {
+      &__delete {
+        display: none;
+      }
+
+      &__restore {
+        display: block;
+      }
+    }
+  }
+
+  &[data-search-hide] {
+    display: none;
+  }
+
+  &__title {
+    width: 100%;
+    padding: 15px 20px 15px 10px;
+
+    &[readonly] {
+      border-color: transparent;
+
+      &:focus-within {
+        outline-color: transparent;
+      }
+    }
+  }
+
+  &__edit,
+  &__delete,
+  &__restore {
+    padding: 15px 10px;
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+    border-left: 1px dotted var(--color-secondary);
+  }
+
+  &__restore {
+    display: none;
+  }
+}
