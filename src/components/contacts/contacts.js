@@ -30,7 +30,7 @@ function Contacts() {
             });
             setToasts(data);
         }
-    }, [feedbackMessage]);
+    }, [feedbackMessage,toasts, setToasts]);
 
     const handleKeyUp = (event) => {
         setMissing(max - event.target.value.length);
